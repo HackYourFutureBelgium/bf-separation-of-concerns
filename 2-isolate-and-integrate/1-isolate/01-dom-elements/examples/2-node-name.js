@@ -14,9 +14,9 @@ console.log(divEl.nodeName, divEl);
 
 // you can't modify the .nodeName property of an element
 try {
-  divEl.nodeName = '!potato!';
+    divEl.nodeName = '!potato!';
 } catch (err) {
-  console.log(err);
+    console.log(err);
 }
 
 const pEl = document.createElement('P');

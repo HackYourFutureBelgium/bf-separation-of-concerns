@@ -12,16 +12,16 @@
 const buttonEl = document.createElement('button');
 
 const demoHandler = () => {
-  // no parameter!
-  // yet the function behaves no differently
+    // no parameter!
+    // yet the function behaves no differently
 
-  const eventType = event.type;
+    const eventType = event.type;
 
-  const target = event.target;
-  const nodeName = target.nodeName;
+    const target = event.target;
+    const nodeName = target.nodeName;
 
-  const message = `you ${eventType}ed a ${nodeName}`;
-  alert(message);
+    const message = `you ${eventType}ed a ${nodeName}`;
+    alert(message);
 };
 
 buttonEl.addEventListener('click', demoHandler);

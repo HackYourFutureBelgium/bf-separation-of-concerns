@@ -1,3 +1,3 @@
 export const format = (x, y) => {
-  return 'X: ' + x + '\nY: ' + y;
+    return 'X: ' + x + '\nY: ' + y;
 };

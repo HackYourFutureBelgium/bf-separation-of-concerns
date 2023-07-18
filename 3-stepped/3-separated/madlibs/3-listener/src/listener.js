@@ -1,3 +1,3 @@
 document.getElementById('user-action').addEventListener('click', (event) => {
-  console.log(event);
+    console.log(event);
 });

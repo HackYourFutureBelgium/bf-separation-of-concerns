@@ -8,29 +8,29 @@ import { filterNumber } from '../utils/filter-number.js';
 import { numberList } from '../components/number-list.js';
 
 export const removeOne = (event) => {
-  debugger; // each time the user removes a number
+    debugger; // each time the user removes a number
 
-  // only continue if the user clicked a list item
-  if (event.target.nodeName !== 'LI') {
-    return;
-  }
+    // only continue if the user clicked a list item
+    if (event.target.nodeName !== 'LI') {
+        return;
+    }
 
-  // --- process user input ---
-  const toRemove = Number(event.target.innerText);
+    // --- process user input ---
+    const toRemove = Number(event.target.innerText);
 
-  // --- update state ---
-  state.numbers = filterNumber(state.numbers, toRemove);
+    // --- update state ---
+    state.numbers = filterNumber(state.numbers, toRemove);
 
-  // --- read state to update the UI ---
+    // --- read state to update the UI ---
 
-  // sort a copy of all saved numbers
-  const sortedNumbers = sortNumbers(state.numbers);
+    // sort a copy of all saved numbers
+    const sortedNumbers = sortNumbers(state.numbers);
 
-  // render a new list
-  const newList = numberList(sortedNumbers);
+    // render a new list
+    const newList = numberList(sortedNumbers);
 
-  // append the list to the DOM
-  const listContainer = document.getElementById(OUTPUT_ID);
-  listContainer.innerHTML = '';
-  listContainer.appendChild(newList);
+    // append the list to the DOM
+    const listContainer = document.getElementById(OUTPUT_ID);
+    listContainer.innerHTML = '';
+    listContainer.appendChild(newList);
 };

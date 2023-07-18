@@ -1,8 +1,8 @@
 import { play, clearModal, restartGame } from './handlers.js';
 
 document
-  .querySelectorAll('.choice')
-  .forEach((choice) => choice.addEventListener('click', play));
+    .querySelectorAll('.choice')
+    .forEach((choice) => choice.addEventListener('click', play));
 
 window.addEventListener('click', clearModal);
 

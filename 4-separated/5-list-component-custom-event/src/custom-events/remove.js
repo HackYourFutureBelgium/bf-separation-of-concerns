@@ -7,7 +7,7 @@ import { DELETE_EVENT } from '../../data/constants.js';
  * @returns {CustomEvent#remove} - An custom event with the word to remove saved to .detail.
  */
 export const remove = (toRemove = '') =>
-  new CustomEvent(DELETE_EVENT, {
-    bubbles: true,
-    detail: toRemove,
-  });
+    new CustomEvent(DELETE_EVENT, {
+        bubbles: true,
+        detail: toRemove,
+    });

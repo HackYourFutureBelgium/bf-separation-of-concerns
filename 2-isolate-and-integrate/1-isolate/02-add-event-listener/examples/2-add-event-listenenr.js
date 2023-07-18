@@ -18,12 +18,12 @@ const buttonEl = document.createElement('button');
 
 // write an event handler
 const greetingHandler = () => {
-  const userName = prompt('what is your name?');
-  if (userName === null) {
-    return;
-  }
-  const greeting = `hello ${userName}`;
-  alert(greeting);
+    const userName = prompt('what is your name?');
+    if (userName === null) {
+        return;
+    }
+    const greeting = `hello ${userName}`;
+    alert(greeting);
 };
 
 // add a 'click' event listener to the button

@@ -6,15 +6,15 @@ debugger; // once when the module is loaded
  * @returns {string} the reversed text
  */
 export const reverseString = (text) => {
-  debugger; // each time the function is called
+    debugger; // each time the function is called
 
-  let reversedText = '';
+    let reversedText = '';
 
-  for (let index = text.length - 1; index > -1; index--) {
-    const nextCharacter = text[index];
-    reversedText = reversedText + nextCharacter;
-  }
-  return reversedText;
+    for (let index = text.length - 1; index > -1; index--) {
+        const nextCharacter = text[index];
+        reversedText = reversedText + nextCharacter;
+    }
+    return reversedText;
 };
 // test cases
 console.assert(reverseString('abc') === 'cba', 'Test 1: reverse');
@@ -27,17 +27,17 @@ console.assert(reverseString('_ _ ') === ' _ _', 'Test 3: reverse');
  * @returns {string} a new string with no vowels
  */
 export const removeVowels = (text) => {
-  debugger; // each time the function is called
+    debugger; // each time the function is called
 
-  const vowels = 'AEIOUaeiou';
-  let devoweled = '';
+    const vowels = 'AEIOUaeiou';
+    let devoweled = '';
 
-  for (const character of text) {
-    if (!vowels.includes(character)) {
-      devoweled = devoweled + character;
+    for (const character of text) {
+        if (!vowels.includes(character)) {
+            devoweled = devoweled + character;
+        }
     }
-  }
-  return devoweled;
+    return devoweled;
 };
 // test cases
 console.assert(removeVowels('bAnanA') === 'bnn', 'Test 1: removeVowels');

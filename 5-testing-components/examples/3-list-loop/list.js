@@ -5,14 +5,14 @@
  * @returns {HTMLOListElement} the rendered list
  */
 export const list = (arr, startNum = 1) => {
-  const olEl = document.createElement('ol');
-  olEl.start = startNum;
+    const olEl = document.createElement('ol');
+    olEl.start = startNum;
 
-  for (const string of arr) {
-    const liEl = document.createElement('li');
-    liEl.innerText = string;
-    olEl.appendChild(liEl);
-  }
-  
-  return olEl;
+    for (const string of arr) {
+        const liEl = document.createElement('li');
+        liEl.innerText = string;
+        olEl.appendChild(liEl);
+    }
+
+    return olEl;
 };

@@ -13,8 +13,8 @@ console.log('.childElementCount', divEl.childElementCount);
 // update each child using a for loop
 const childrenArray = Array.from(divEl.children);
 childrenArray.forEach((child) => {
-  // children are updated by reference
-  child.innerHTML += '!';
+    // children are updated by reference
+    child.innerHTML += '!';
 });
 
 // the changes are visible in the parent

@@ -1,5 +1,5 @@
 export const preventDefault = (event) => {
-  event.preventDefault();
+    event.preventDefault();
 
-  console.log('default event behavior prevented');
+    console.log('default event behavior prevented');
 };

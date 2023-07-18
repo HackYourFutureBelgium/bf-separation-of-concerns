@@ -7,7 +7,7 @@
  * @returns {string} rendered header tag
  */
 const renderHeader = (level, text) => {
-  return _;
+    return _;
 };
 
 const happyH1 = renderHeader(1, ':)');

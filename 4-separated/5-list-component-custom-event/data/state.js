@@ -1,5 +1,5 @@
 export const state = {
-  query: '',
-  filtered: [],
-  all: [],
+    query: '',
+    filtered: [],
+    all: [],
 };

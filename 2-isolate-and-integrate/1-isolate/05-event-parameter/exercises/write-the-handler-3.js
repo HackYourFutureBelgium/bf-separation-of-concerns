@@ -9,7 +9,7 @@ inputEl.type = 'checkbox';
 console.log('initial input:', inputEl.cloneNode(true));
 
 const toggleCheckedHandler = (event) => {
-  // write code to reverse the boolean .checked value on the target element
+    // write code to reverse the boolean .checked value on the target element
 };
 
 inputEl.addEventListener('click', toggleCheckedHandler);

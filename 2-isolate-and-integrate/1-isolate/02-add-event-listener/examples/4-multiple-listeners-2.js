@@ -11,7 +11,7 @@ const buttonEl = document.createElement('button');
 
 // write two different handlers
 const helloHandler = () => {
-  alert('hello!');
+    alert('hello!');
 };
 
 // call the handler when the button is clicked

@@ -1,4 +1,4 @@
 export const state = {
-  currentNumber: 0,
-  allNumbers: [],
+    currentNumber: 0,
+    allNumbers: [],
 };

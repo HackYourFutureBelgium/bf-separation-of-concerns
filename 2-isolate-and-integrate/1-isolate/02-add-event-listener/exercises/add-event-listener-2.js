@@ -7,16 +7,16 @@ buttonEl.innerHTML = 'log in';
 console.log(buttonEl.nodeName, buttonEl.cloneNode(true));
 
 const _ = () => {
-  const username = prompt('enter your user name');
-  if (username === null) {
-    return;
-  }
-  const password = prompt('enter your password');
-  if (password === null) {
-    return;
-  }
+    const username = prompt('enter your user name');
+    if (username === null) {
+        return;
+    }
+    const password = prompt('enter your password');
+    if (password === null) {
+        return;
+    }
 
-  alert(`welcome, ${username}`);
+    alert(`welcome, ${username}`);
 };
 
 buttonEl.addEventListener('hover', authenticationHandler);

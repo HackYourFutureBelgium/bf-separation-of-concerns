@@ -7,5 +7,5 @@
  * @returns {number[]} Rhe filtered numbers.
  */
 export const filterNumber = (allNumbers = [], remove = 0) => {
-  return allNumbers.filter((number) => number !== remove);
+    return allNumbers.filter((number) => number !== remove);
 };

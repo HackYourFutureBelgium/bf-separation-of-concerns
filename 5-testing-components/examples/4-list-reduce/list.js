@@ -6,18 +6,20 @@
  * @returns {HTMLOListElement} the rendered list
  */
 export const list = (arr, startNum) => {
-  const renderLi = (item) => {
-    const liEl = document.createElement('li');
-    liEl.innerText = item;
-    return liEl;
-  };
-  const appendLi = (listEl, nextLi) => {
-    listEl.appendChild(nextLi);
-    return listEl;
-  };
-  const olEl = arr.map(renderLi).reduce(appendLi, document.createElement('ol'));
+    const renderLi = (item) => {
+        const liEl = document.createElement('li');
+        liEl.innerText = item;
+        return liEl;
+    };
+    const appendLi = (listEl, nextLi) => {
+        listEl.appendChild(nextLi);
+        return listEl;
+    };
+    const olEl = arr
+        .map(renderLi)
+        .reduce(appendLi, document.createElement('ol'));
 
-  olEl.start = startNum;
+    olEl.start = startNum;
 
-  return olEl;
+    return olEl;
 };

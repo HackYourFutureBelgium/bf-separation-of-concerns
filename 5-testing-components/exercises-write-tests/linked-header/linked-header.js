@@ -9,13 +9,13 @@
  * @returns {HTMLHeadingElement} a linked heading
  */
 export const linkedHeader = (text, link, target = '_blank') => {
-  const h2El = document.createElement('h2');
+    const h2El = document.createElement('h2');
 
-  const aEl = document.createElement('a');
-  aEl.href = link;
-  aEl.target = target;
-  aEl.innerHTML = text;
-  h2El.appendChild(aEl);
+    const aEl = document.createElement('a');
+    aEl.href = link;
+    aEl.target = target;
+    aEl.innerHTML = text;
+    h2El.appendChild(aEl);
 
-  return h2El;
+    return h2El;
 };

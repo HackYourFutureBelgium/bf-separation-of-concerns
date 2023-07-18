@@ -9,10 +9,10 @@
  * @returns {HTMLAnchorElement} a rendered anchor element
  */
 export const link = (text, url, target = '_blank') => {
-  const aEl = document.createElement('a');
-  aEl.href = url;
-  aEl.target = target;
-  aEl.innerHTML = text;
+    const aEl = document.createElement('a');
+    aEl.href = url;
+    aEl.target = target;
+    aEl.innerHTML = text;
 
-  return aEl;
+    return aEl;
 };

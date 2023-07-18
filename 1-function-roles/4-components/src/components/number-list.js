@@ -7,14 +7,14 @@ import { LIST_CLASS } from '../../data/constants.js';
  * @returns {HTMLUListElement} A UL element listing the numbers.
  */
 export const numberList = (nums = []) => {
-  const listEl = document.createElement('ul');
+    const listEl = document.createElement('ul');
 
-  for (const number of nums) {
-    const itemEl = document.createElement('li');
-    itemEl.innerText = number;
-    itemEl.className = LIST_CLASS;
-    listEl.appendChild(itemEl);
-  }
+    for (const number of nums) {
+        const itemEl = document.createElement('li');
+        itemEl.innerText = number;
+        itemEl.className = LIST_CLASS;
+        listEl.appendChild(itemEl);
+    }
 
-  return listEl;
+    return listEl;
 };

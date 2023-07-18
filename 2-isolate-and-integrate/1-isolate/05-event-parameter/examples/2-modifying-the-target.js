@@ -11,13 +11,13 @@ buttonEl.innerHTML = 'initial text';
 console.log(buttonEl.nodeName, buttonEl.cloneNode(true));
 
 const updateInnerHTMLHandler = () => {
-  const newInnerHTML = prompt('enter new button text');
-  if (newInnerHTML === null) {
-    return;
-  }
+    const newInnerHTML = prompt('enter new button text');
+    if (newInnerHTML === null) {
+        return;
+    }
 
-  const target = event.target;
-  target.innerHTML = newInnerHTML;
+    const target = event.target;
+    target.innerHTML = newInnerHTML;
 };
 
 buttonEl.addEventListener('click', updateInnerHTMLHandler);

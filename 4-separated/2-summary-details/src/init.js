@@ -1,8 +1,8 @@
 import {
-  CONTAINER_ID,
-  MAIN_ID,
-  SUMMARY_ID,
-  TOGGLE_ID,
+    CONTAINER_ID,
+    MAIN_ID,
+    SUMMARY_ID,
+    TOGGLE_ID,
 } from '../data/constants.js';
 
 import { load } from './listeners/load.js';

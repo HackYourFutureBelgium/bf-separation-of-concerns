@@ -8,17 +8,17 @@ debugger; // once when the script is loaded
  * @returns {string} the reversed text
  */
 function reverseString(text) {
-  debugger; // each time the function is called
+    debugger; // each time the function is called
 
-  var reversedText = '';
-  var i;
-  var nextCharacter;
+    var reversedText = '';
+    var i;
+    var nextCharacter;
 
-  for (i = text.length - 1; i > -1; i--) {
-    nextCharacter = text[i];
-    reversedText = reversedText + nextCharacter;
-  }
-  return reversedText;
+    for (i = text.length - 1; i > -1; i--) {
+        nextCharacter = text[i];
+        reversedText = reversedText + nextCharacter;
+    }
+    return reversedText;
 }
 // test cases
 console.assert(reverseString('abc') === 'cba', 'Test 1: reverse');
@@ -31,20 +31,20 @@ console.assert(reverseString('_ _ ') === ' _ _', 'Test 3: reverse');
  * @returns {string} a new string with no vowels
  */
 function removeVowels(text) {
-  debugger; // each time the function is called
+    debugger; // each time the function is called
 
-  var vowels = 'AEIOUaeiou';
-  var devoweled = '';
-  var i;
-  var character;
+    var vowels = 'AEIOUaeiou';
+    var devoweled = '';
+    var i;
+    var character;
 
-  for (i = 0; i < text.length; i++) {
-    character = text[i];
-    if (!vowels.includes(character)) {
-      devoweled = devoweled + character;
+    for (i = 0; i < text.length; i++) {
+        character = text[i];
+        if (!vowels.includes(character)) {
+            devoweled = devoweled + character;
+        }
     }
-  }
-  return devoweled;
+    return devoweled;
 }
 // test cases
 console.assert(removeVowels('bAnanA') === 'bnn', 'Test 1: removeVowels');

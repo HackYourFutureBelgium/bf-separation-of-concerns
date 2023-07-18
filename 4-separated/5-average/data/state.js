@@ -1,6 +1,6 @@
 export const state = {
-  average: 0,
-  validNumbers: [],
-  invalidNumbers: [],
-  closed: false,
+    average: 0,
+    validNumbers: [],
+    invalidNumbers: [],
+    closed: false,
 };

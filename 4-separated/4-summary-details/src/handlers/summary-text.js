@@ -5,19 +5,19 @@ import { state } from '../../data/state.js';
 import { infoElement } from '../components/info-element.js';
 
 export const summaryTextHandler = () => {
-  debugger;
-  // read user input
-  const newSummaryText = document.getElementById(SUMMARY_ID).value;
+    debugger;
+    // read user input
+    const newSummaryText = document.getElementById(SUMMARY_ID).value;
 
-  // update state
-  state.summaryText = newSummaryText;
+    // update state
+    state.summaryText = newSummaryText;
 
-  // update UI from state
-  const detailsContainer = document.getElementById(CONTAINER_ID);
-  detailsContainer.innerHTML = '';
-  const newInfoComponent = infoElement(state);
-  detailsContainer.appendChild(newInfoComponent);
+    // update UI from state
+    const detailsContainer = document.getElementById(CONTAINER_ID);
+    detailsContainer.innerHTML = '';
+    const newInfoComponent = infoElement(state);
+    detailsContainer.appendChild(newInfoComponent);
 
-  // log interaction
-  console.log('updated summary text:', newSummaryText);
+    // log interaction
+    console.log('updated summary text:', newSummaryText);
 };

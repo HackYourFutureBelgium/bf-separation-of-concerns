@@ -11,11 +11,11 @@ const buttonEl = document.createElement('button');
 
 // write two different handlers
 const firstHandler = () => {
-  alert('first handler');
+    alert('first handler');
 };
 
 const secondHandler = () => {
-  alert('second handler');
+    alert('second handler');
 };
 
 // add listeners

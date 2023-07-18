@@ -16,15 +16,15 @@ const buttonEl = document.createElement('button');
 
 // write an event handler
 const demoHandler = (event) => {
-  // the same event from parent scope, passed by reference
-  const eventType = event.type;
+    // the same event from parent scope, passed by reference
+    const eventType = event.type;
 
-  // the same element as buttonEl, passed by reference
-  const target = event.target;
-  const nodeName = target.nodeName;
+    // the same element as buttonEl, passed by reference
+    const target = event.target;
+    const nodeName = target.nodeName;
 
-  const message = `you ${eventType}ed a ${nodeName}`;
-  alert(message);
+    const message = `you ${eventType}ed a ${nodeName}`;
+    alert(message);
 };
 
 // add two event listeners to the button

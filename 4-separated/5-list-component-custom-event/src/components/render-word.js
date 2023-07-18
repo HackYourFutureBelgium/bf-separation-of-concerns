@@ -7,14 +7,14 @@ import { remove } from '../custom-events/remove.js';
  * @param {} word
  */
 export const renderWord = (word = '') => {
-  const container = document.createElement('text');
-  container.innerText = word;
-  container.className = WORD_CLASS;
+    const container = document.createElement('text');
+    container.innerText = word;
+    container.className = WORD_CLASS;
 
-  container.addEventListener('click', (e) => {
-    e.preventDefault();
-    e.dispatchEvent(remove(word));
-  });
+    container.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.dispatchEvent(remove(word));
+    });
 
-  return container;
+    return container;
 };

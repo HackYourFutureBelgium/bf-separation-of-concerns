@@ -11,20 +11,20 @@ debugger; // once when the module is loaded
  * uses: reverse, removeVowels
  */
 export const handleClick = (event) => {
-  debugger; // each time a user clicks the button
+    debugger; // each time a user clicks the button
 
-  const form = event.target.form;
+    const form = event.target.form;
 
-  const input = form.text.value;
-  const action = form.action.value;
+    const input = form.text.value;
+    const action = form.action.value;
 
-  const result =
-    action === 'reverse' ? reverseString(input) : removeVowels(input);
+    const result =
+        action === 'reverse' ? reverseString(input) : removeVowels(input);
 
-  form.output.value = result;
+    form.output.value = result;
 
-  // log the interaction for developers
-  console.log(input, action, result);
+    // log the interaction for developers
+    console.log(input, action, result);
 };
 
 debugger;

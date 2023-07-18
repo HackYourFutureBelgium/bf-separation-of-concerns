@@ -12,7 +12,7 @@ console.log('.childElementCount', divEl.childElementCount);
 
 // update each child using a for loop
 for (const child of divEl.children) {
-  child.innerHTML += '!';
+    child.innerHTML += '!';
 }
 
 // the changes are visible in the parent

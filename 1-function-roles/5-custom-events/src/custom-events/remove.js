@@ -7,8 +7,8 @@ import { REMOVE_EVENT } from '../../data/constants.js';
  * @returns {CustomEvent#remove} - An `remove` event with your number.
  */
 export const remove = (toRemove = 0) => {
-  return new CustomEvent(REMOVE_EVENT, {
-    bubbles: true,
-    detail: { number: toRemove },
-  });
+    return new CustomEvent(REMOVE_EVENT, {
+        bubbles: true,
+        detail: { number: toRemove },
+    });
 };

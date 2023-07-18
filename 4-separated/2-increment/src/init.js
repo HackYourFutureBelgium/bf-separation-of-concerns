@@ -11,8 +11,8 @@ debugger;
 appLoad(document);
 
 incrementListeners(
-  document.getElementById(UP_ID),
-  document.getElementById(DOWN_ID),
+    document.getElementById(UP_ID),
+    document.getElementById(DOWN_ID),
 );
 resetListener(document.getElementById(RESET_ID));
 setStepListener(document.getElementById(STEP_ID));
