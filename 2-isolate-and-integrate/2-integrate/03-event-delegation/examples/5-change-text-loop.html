@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>change text (loop)</title>
+
+    <style>
+      .centered {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      ol {
+        border: solid black;
+        padding-right: 1em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main id="root" class="centered">
+      <ul id="main-list">
+        <ol>
+          <li>a</li>
+          <li>b</li>
+          <li>c</li>
+        </ol>
+        <ol>
+          <li>x</li>
+          <li>y</li>
+          <li>z</li>
+        </ol>
+      </ul>
+    </main>
+
+    <script id="handlers">
+      const updateInnerHTMLHandler = (event) => {
+        debugger;
+
+        const newInnerHTML = prompt('enter new text');
+        if (newInnerHTML === null) {
+          return;
+        }
+
+        const target = event.target;
+        target.innerHTML = newInnerHTML;
+
+        const currentTarget = event.currentTarget;
+        const message = `- you clicked: ${target.nodeName}\n- the event is handled by: ${currentTarget.nodeName}`;
+        alert(message);
+      };
+    </script>
+
+    <script id="listeners">
+      debugger;
+
+      // attach the event listener to each and every <td>
+      const tableBody = document.getElementById('main-list');
+      const liEls = tableBody.getElementsByTagName('li');
+      for (const liEl of liEls) {
+        liEl.addEventListener('click', updateInnerHTMLHandler);
+      }
+    </script>
+  </body>
+</html>
