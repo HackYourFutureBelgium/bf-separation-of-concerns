@@ -1,22 +1,22 @@
 .centered {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 input {
-  text-align: center;
+    text-align: center;
 }
 
 .important {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .tidy-list {
-  /* https://www.w3schools.com/howto/howto_css_list_without_bullets.asp */
-  list-style-type: none; /* Remove bullets */
-  padding: 0; /* Remove padding */
-  margin: 0; /* Remove margins */
+    /* https://www.w3schools.com/howto/howto_css_list_without_bullets.asp */
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
 }

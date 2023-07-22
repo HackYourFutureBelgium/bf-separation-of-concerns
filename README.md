@@ -84,4 +84,14 @@ There is no linting script in this repository. It's for practice only, no need t
 
 ![draino in the fridge](./assets/draino-in-the-fridge.png)
 
-[TOP](#separation-of-concerns)
+## Class recording
+
+<details>
+<summary>expand/collapse</summary>
+<br>
+
+### Week1
+
+### Week2
+
+</details>

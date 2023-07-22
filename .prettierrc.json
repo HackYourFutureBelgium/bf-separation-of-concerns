@@ -11,6 +11,20 @@
         "tabWidth": 4,
         "useTabs": false
       }
+    },
+    {
+      "files": "*.css",
+      "options": {
+        "tabWidth": 4,
+        "useTabs": false
+      }
+    },
+    {
+      "files": "*.html",
+      "options": {
+        "tabWidth": 4,
+        "useTabs": false
+      }
     }
   ]
 }

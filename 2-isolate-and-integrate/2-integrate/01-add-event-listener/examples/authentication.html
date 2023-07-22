@@ -1,107 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>authentication</title>
+    <head>
+        <meta charset="utf-8" />
+        <title>authentication</title>
 
-    <style>
-      .centered {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-      }
-    </style>
-  </head>
+        <style>
+            .centered {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+        </style>
+    </head>
 
-  <body>
-    <main id="root" class="centered">
-      <button id="log-in">log in</button>
-      <button id="log-out">log out</button>
-    </main>
+    <body>
+        <main id="root" class="centered">
+            <button id="log-in">log in</button>
+            <button id="log-out">log out</button>
+        </main>
 
-    <script id="data">
-      const state = {
-        loggedIn: false,
-        currentUser: undefined,
-      };
-    </script>
+        <script id="data">
+            const state = {
+                loggedIn: false,
+                currentUser: undefined,
+            };
+        </script>
 
-    <script id="handlers">
-      const logInHandler = () => {
-        debugger;
+        <script id="handlers">
+            const logInHandler = () => {
+                debugger;
 
-        if (state.loggedIn) {
-          alert(`${state.currentUser} is already logged in`);
-          return;
-        }
+                if (state.loggedIn) {
+                    alert(`${state.currentUser} is already logged in`);
+                    return;
+                }
 
-        const userName = prompt('enter your user name');
-        if (userName === null) {
-          return;
-        }
+                const userName = prompt('enter your user name');
+                if (userName === null) {
+                    return;
+                }
 
-        const password1 = prompt('enter your password');
-        if (password1 === null) {
-          return;
-        }
+                const password1 = prompt('enter your password');
+                if (password1 === null) {
+                    return;
+                }
 
-        const password2 = prompt('please confirm your password');
-        if (password2 === null) {
-          return;
-        }
+                const password2 = prompt('please confirm your password');
+                if (password2 === null) {
+                    return;
+                }
 
-        if (password1 !== password2) {
-          alert('passwords do not match');
-          return;
-        }
-        state.loggedIn = true;
-        state.currentUser = userName;
-        const message = `welcome ${state.currentUser}`;
-        alert(message);
-      };
+                if (password1 !== password2) {
+                    alert('passwords do not match');
+                    return;
+                }
+                state.loggedIn = true;
+                state.currentUser = userName;
+                const message = `welcome ${state.currentUser}`;
+                alert(message);
+            };
 
-      const logOutHandler = () => {
-        debugger;
+            const logOutHandler = () => {
+                debugger;
 
-        if (!state.loggedIn) {
-          alert('you are not logged in');
-          return;
-        }
+                if (!state.loggedIn) {
+                    alert('you are not logged in');
+                    return;
+                }
 
-        const confirmLogOut = confirm(
-          `${state.currentUser}, are you sure you want to log out?`,
-        );
-        if (!confirmLogOut) {
-          return;
-        }
+                const confirmLogOut = confirm(
+                    `${state.currentUser}, are you sure you want to log out?`,
+                );
+                if (!confirmLogOut) {
+                    return;
+                }
 
-        const message = `good bye ${state.currentUser}`;
-        alert(message);
-        state.loggedIn = false;
-        state.currentUser = null;
-      };
-    </script>
+                const message = `good bye ${state.currentUser}`;
+                alert(message);
+                state.loggedIn = false;
+                state.currentUser = null;
+            };
+        </script>
 
-    <script id="listeners">
-      // https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_event_listeners
-      // https://stackoverflow.com/questions/7338193/using-chrome-how-to-find-to-which-events-are-bound-to-an-element
+        <script id="listeners">
+            // https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_event_listeners
+            // https://stackoverflow.com/questions/7338193/using-chrome-how-to-find-to-which-events-are-bound-to-an-element
 
-      const logIn = (id = '') => {
-        document.getElementById(id).addEventListener('click', logInHandler);
-      };
+            const logIn = (id = '') => {
+                document
+                    .getElementById(id)
+                    .addEventListener('click', logInHandler);
+            };
 
-      const logOut = (id = '') => {
-        document.getElementById(id).addEventListener('click', logOutHandler);
-      };
-    </script>
+            const logOut = (id = '') => {
+                document
+                    .getElementById(id)
+                    .addEventListener('click', logOutHandler);
+            };
+        </script>
 
-    <script id="init">
-      debugger;
+        <script id="init">
+            debugger;
 
-      logIn('log-in');
-      logOut('log-out');
-    </script>
-  </body>
+            logIn('log-in');
+            logOut('log-out');
+        </script>
+    </body>
 </html>

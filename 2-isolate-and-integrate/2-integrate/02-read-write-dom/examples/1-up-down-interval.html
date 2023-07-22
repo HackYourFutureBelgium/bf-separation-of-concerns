@@ -1,72 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>up-down interval</title>
+    <head>
+        <meta charset="utf-8" />
+        <title>up-down interval</title>
 
-    <style>
-      .centered {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-      }
-    </style>
-  </head>
+        <style>
+            .centered {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+        </style>
+    </head>
 
-  <body>
-    <main id="root" class="centered">
-      <code id="output">0</code> <br />
-      <br />
-      <button id="up">+</button>
-      <button id="down">-</button> <br />
-      <br />
-      <input id="set-interval" type="number" value="1" />
-    </main>
+    <body>
+        <main id="root" class="centered">
+            <code id="output">0</code> <br />
+            <br />
+            <button id="up">+</button>
+            <button id="down">-</button> <br />
+            <br />
+            <input id="set-interval" type="number" value="1" />
+        </main>
 
-    <script id="data">
-      const data = {
-        current: 0,
-        interval: 1,
-      };
-    </script>
+        <script id="data">
+            const data = {
+                current: 0,
+                interval: 1,
+            };
+        </script>
 
-    <script id="handlers">
-      const upHandler = () => {
-        debugger;
-        data.current = data.current + data.interval;
+        <script id="handlers">
+            const upHandler = () => {
+                debugger;
+                data.current = data.current + data.interval;
 
-        const output = document.getElementById('output');
-        output.innerHTML = data.current;
-      };
+                const output = document.getElementById('output');
+                output.innerHTML = data.current;
+            };
 
-      const downHandler = () => {
-        debugger;
-        data.current = data.current - data.interval;
+            const downHandler = () => {
+                debugger;
+                data.current = data.current - data.interval;
 
-        const output = document.getElementById('output');
-        output.innerHTML = data.current;
-      };
+                const output = document.getElementById('output');
+                output.innerHTML = data.current;
+            };
 
-      const setIntervalHandler = () => {
-        debugger;
+            const setIntervalHandler = () => {
+                debugger;
 
-        const inputEl = document.getElementById('set-interval');
-        const newIntervalString = inputEl.value;
-        const newInterval = Number(newIntervalString);
-        data.interval = newInterval;
-      };
-    </script>
+                const inputEl = document.getElementById('set-interval');
+                const newIntervalString = inputEl.value;
+                const newInterval = Number(newIntervalString);
+                data.interval = newInterval;
+            };
+        </script>
 
-    <script id="listeners">
-      document.getElementById('up').addEventListener('click', upHandler);
+        <script id="listeners">
+            document.getElementById('up').addEventListener('click', upHandler);
 
-      document.getElementById('down').addEventListener('click', downHandler);
+            document
+                .getElementById('down')
+                .addEventListener('click', downHandler);
 
-      document
-        .getElementById('set-interval')
-        .addEventListener('change', setIntervalHandler);
-    </script>
-  </body>
+            document
+                .getElementById('set-interval')
+                .addEventListener('change', setIntervalHandler);
+        </script>
+    </body>
 </html>

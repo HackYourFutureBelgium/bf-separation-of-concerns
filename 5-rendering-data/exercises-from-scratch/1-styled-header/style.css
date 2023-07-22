@@ -1,14 +1,14 @@
 .fancy {
-  font: italic;
-  font-family: fantasy;
+    font: italic;
+    font-family: fantasy;
 }
 
 .emphatic {
-  font: bolder;
-  font-family: monospace;
+    font: bolder;
+    font-family: monospace;
 }
 
 .discrete {
-  font: small;
-  font-family: cursive;
+    font: small;
+    font-family: cursive;
 }
