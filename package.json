@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/HackYourFutureBelgium/separation-of-concerns#readme",
   "devDependencies": {
+    "@babel/core": "^7.22.8",
+    "@babel/eslint-parser": "^7.22.7",
+    "@babel/plugin-transform-modules-commonjs": "^7.22.5",
+    "@babel/preset-env": "^7.22.7",
     "jest": "^27.0.6",
     "prettier": "^2.3.2"
   }
