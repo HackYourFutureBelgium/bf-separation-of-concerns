@@ -2,16 +2,16 @@ import { state } from '../../data/state.js';
 
 import { OUTPUT_ID, LIST_CLASS } from '../../data/constants.js';
 
-export const removeOne = (event) => {
+export const removeOne = (e) => {
     debugger; // each time the user removes a number
 
     // only continue if the user clicked a list item
-    if (event.target.nodeName !== 'LI') {
+    if (e.target.nodeName !== 'LI') {
         return;
     }
 
     // --- process user input ---
-    const toRemove = Number(event.target.innerText);
+    const toRemove = Number(e.target.innerText);
 
     // --- update state ---
     state.numbers = state.numbers.filter((number) => number !== toRemove);

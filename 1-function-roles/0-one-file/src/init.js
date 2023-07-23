@@ -12,11 +12,11 @@ debugger; // once when the program is initialized
 
 // ===== a user can add a number to the list =====
 
-document.getElementById(INPUT_ID).addEventListener(ADD_EVENT, (event) => {
+document.getElementById(INPUT_ID).addEventListener(ADD_EVENT, (e) => {
     debugger; // each time the user adds a number
 
     // --- process user input ---
-    const newNumber = Number(event.target.value);
+    const newNumber = Number(e.target.value);
 
     // --- update state ---
     state.numbers.push(newNumber);
@@ -41,16 +41,16 @@ document.getElementById(INPUT_ID).addEventListener(ADD_EVENT, (event) => {
 
 // ===== a user can remove a number from the list =====
 
-document.getElementById(OUTPUT_ID).addEventListener(REMOVE_EVENT, (event) => {
+document.getElementById(OUTPUT_ID).addEventListener(REMOVE_EVENT, (e) => {
     debugger; // each time the user removes a number
 
     // only continue if the user clicked a list item
-    if (event.target.nodeName !== 'LI') {
+    if (e.target.nodeName !== 'LI') {
         return;
     }
 
     // --- process user input ---
-    const toRemove = Number(event.target.innerText);
+    const toRemove = Number(e.target.innerText);
 
     // --- update state ---
     state.numbers = state.numbers.filter((number) => number !== toRemove);

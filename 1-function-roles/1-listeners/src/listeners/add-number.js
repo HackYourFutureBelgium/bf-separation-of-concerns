@@ -3,11 +3,11 @@ import { state } from '../../data/state.js';
 import { ADD_EVENT, OUTPUT_ID, LIST_CLASS } from '../../data/constants.js';
 
 export const addNumber = (id = '') => {
-    document.getElementById(id).addEventListener(ADD_EVENT, (event) => {
+    document.getElementById(id).addEventListener(ADD_EVENT, (e) => {
         debugger; // each time the user adds a number
 
         // --- process user input ---
-        const newNumber = Number(event.target.value);
+        const newNumber = Number(e.target.value);
 
         // --- update state ---
         state.numbers.push(newNumber);

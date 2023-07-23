@@ -4,11 +4,11 @@ import { OUTPUT_ID, LIST_CLASS } from '../../data/constants.js';
 
 import { sortNumbers } from '../utils/sort-numbers.js';
 
-export const addOne = (event) => {
+export const addOne = (e) => {
     debugger; // each time the user adds a number
 
     // --- process user input ---
-    const newNumber = Number(event.target.value);
+    const newNumber = Number(e.target.value);
 
     // --- update state ---
     state.numbers.push(newNumber);

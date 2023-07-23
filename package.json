@@ -21,6 +21,7 @@
     "@babel/eslint-parser": "^7.22.7",
     "@babel/plugin-transform-modules-commonjs": "^7.22.5",
     "@babel/preset-env": "^7.22.7",
+    "dependency-cruiser": "^13.1.1",
     "jest": "^27.0.6",
     "prettier": "^2.3.2"
   }

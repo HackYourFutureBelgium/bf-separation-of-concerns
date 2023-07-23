@@ -5,16 +5,16 @@ import { OUTPUT_ID, LIST_CLASS } from '../../data/constants.js';
 import { sortNumbers } from '../utils/sort-numbers.js';
 import { filterNumber } from '../utils/filter-number.js';
 
-export const removeOne = (event) => {
+export const removeOne = (e) => {
     debugger; // each time the user removes a number
 
     // only continue if the user clicked a list item
-    if (event.target.nodeName !== 'LI') {
+    if (e.target.nodeName !== 'LI') {
         return;
     }
 
     // --- process user input ---
-    const toRemove = Number(event.target.innerText);
+    const toRemove = Number(e.target.innerText);
 
     // --- update state ---
     state.numbers = filterNumber(state.numbers, toRemove);

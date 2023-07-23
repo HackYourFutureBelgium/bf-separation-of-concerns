@@ -7,16 +7,16 @@ import { filterNumber } from '../utils/filter-number.js';
 
 import { numberList } from '../components/number-list.js';
 
-export const removeOne = (event) => {
+export const removeOne = (e) => {
     debugger; // each time the user removes a number
 
     // only continue if the user clicked a list item
-    if (event.target.nodeName !== 'LI') {
+    if (e.target.nodeName !== 'LI') {
         return;
     }
 
     // --- process user input ---
-    const toRemove = Number(event.target.innerText);
+    const toRemove = Number(e.target.innerText);
 
     // --- update state ---
     state.numbers = filterNumber(state.numbers, toRemove);
