@@ -8,7 +8,7 @@
     "url": "git+https://github.com/HackYourFutureBelgium/separation-of-concerns.git"
   },
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --passWithNoTests",
+    "test": "jest --silent",
     "format": "prettier --write ./"
   },
   "license": "MIT",
