@@ -60,14 +60,6 @@ You can run tests in this repository using the `test` script, it will run all th
 
 If you do `npm run test` or `npm run test -- ./` it will run every test in this repository. (there are a lot)
 
-### `npm run document -- path/to/src`
-
-> Pro Tip: do not use `npm run document` without a specific path, it is very slow!
-
-This script will build a dependency graph for all the JavaScript files inside a specific `/src` folder. It can be very helpful to run the document script every time you add/remove a file or change the `import`/`export`s in an exercise.
-
-If you run this script at a higher directory, like `./`, it will document all of the `/src` folders inside that directory.
-
 ### `npm run format -- path`
 
 This script will format all of the code in the path you provide.
