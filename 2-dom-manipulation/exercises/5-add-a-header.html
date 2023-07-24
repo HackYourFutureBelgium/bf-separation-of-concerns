@@ -44,6 +44,14 @@
                     'use strict';
                     debugger;
 
+                    const div = document.getElementById('actual');
+                    const title = document.createElement('h1');
+                    title.innerText = 'a list of things';
+                    const ul = div.querySelector('ul');
+                    ul.querySelector('li:nth-child(2)').innerText =
+                        'solar systems';
+                    div.insertBefore(title, ul);
+
                     // write me! (... without using cloneNode, that's kind of cheating)
                 </script>
             </div>
