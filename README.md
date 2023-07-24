@@ -84,6 +84,8 @@ There is no linting script in this repository. It's for practice only, no need t
 
 ### Week1
 
+- [day1](https://youtu.be/IDCeq2z-_6Y)
+
 ### Week2
 
 </details>
