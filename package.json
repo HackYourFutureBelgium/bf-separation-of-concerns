@@ -9,6 +9,7 @@
   },
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --passWithNoTests",
+    "test1": "jest --silent ",
     "format": "prettier --write ./"
   },
   "license": "MIT",
@@ -19,6 +20,10 @@
   "devDependencies": {
     "dependency-cruiser": "^13.1.1",
     "jest": "^27.0.6",
-    "prettier": "^2.3.2"
+    "prettier": "^2.3.2",
+    "@babel/core": "^7.22.8",
+    "@babel/eslint-parser": "^7.22.7",
+    "@babel/plugin-transform-modules-commonjs": "^7.22.5",
+    "@babel/preset-env": "^7.22.7"
   }
 }
