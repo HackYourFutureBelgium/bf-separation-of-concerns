@@ -1,6 +1,6 @@
 {
   "--defaults": {
-    ".js": "highlight"
+    ".js": "study"
   },
   "--port": 4004,
   "study": {
@@ -8,6 +8,6 @@
     "type": "module",
     "eval": true,
     "environment": true,
-    "tests": [".spec.js"]
+    "tests": [".spec.js", ".test.js"]
   }
 }
