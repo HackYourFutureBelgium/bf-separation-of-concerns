@@ -1,8 +1,9 @@
 'use strict';
+debugger;
 
-const element = document.createElement('buton');
-element.innerHtml = 'go home';
-element.class = 'large-btn';
+const element = document.createElement('button');
+element.innerHTML = 'go home';
+element.className.add = 'large-btn';
 
 // the assertions are correct!  change the code above to pass them
 console.assert(element.nodeName === 'BUTTON', 'Test 1: nodeName');

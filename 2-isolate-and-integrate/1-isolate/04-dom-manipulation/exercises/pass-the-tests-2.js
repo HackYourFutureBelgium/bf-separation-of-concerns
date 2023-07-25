@@ -10,7 +10,15 @@ ulEl.innerHTML = `
 console.log(ulEl.nodeName + ' (before)', ulEl.cloneNode(true));
 
 // --- write some code ---
-
+const li = ulEl.querySelectorAll('li');
+li[0].innerHTML = 'toad';
+const liFrog = document.createElement('li');
+liFrog.innerHTML = 'frog';
+const p = ulEl.querySelector('p');
+p.insertAdjacentElement('beforebegin', liFrog);
+p.remove();
+const lastLi = li[li.length - 1];
+lastLi.remove();
 // --- --- --- --- --- ---
 
 console.log(ulEl.nodeName + ' (after)', ulEl.cloneNode(true));
