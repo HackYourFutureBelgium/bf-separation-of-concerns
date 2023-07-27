@@ -16,36 +16,46 @@
 
         <script id="handlers">
             const deleteTodoHandler = (event) => {
-                debugger;
-                const target = _;
-                if (target._ === 'BUTTON' && target._ === 'X') {
-                    const liToRemove = _.parentElement;
-                    const todoList = document.getElementById(_);
-                    todoList._(liToRemove);
+                // debugger;
+                const target = event.target;
+                if (
+                    target.nodeName === 'BUTTON' &&
+                    target.textContent === 'X'
+                ) {
+                    const liToRemove = target.parentElement;
+                    const todoList = document.getElementById('list');
+                    todoList.removeChild(liToRemove);
                 }
             };
 
             const addTodoHandler = (event) => {
-                debugger;
+                // debugger;
 
-                const newLi = document.createElement(_);
-                const newButton = document.createElement(_);
-                newButton.innerHTML = '_';
+                const newLi = document.createElement('li');
+                const newButton = document.createElement('button');
+                newButton.innerHTML = 'X';
                 newLi.appendChild(newButton);
-                const newInput = document.createElement(_);
+                const newInput = document.createElement('input');
+                newInput.setAttribute('value', 'stop coding');
                 newLi.appendChild(newInput);
 
-                const addButton = event._;
-                const addButtonParent = addButton._;
-                const todoList = addButtonParent._;
-                todoList.insertBefore(_, _);
+                const addButton = event.target;
+                const addButtonParent = addButton.parentElement;
+                console.log('addButtonParent : ' + addButtonParent);
+                const todoList = addButtonParent.parentElement;
+
+                todoList.insertBefore(newLi, addButtonParent);
             };
         </script>
 
         <script id=" listeners">
-            document.getElementById(_).addEventListener('click', _);
+            document
+                .getElementById('list')
+                .addEventListener('click', deleteTodoHandler);
 
-            document.getElementById(_).addEventListener('click', _);
+            document
+                .getElementById('add-todo-button')
+                .addEventListener('click', addTodoHandler);
         </script>
     </body>
 </html>
