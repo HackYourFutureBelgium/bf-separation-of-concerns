@@ -4,7 +4,6 @@
         <meta charset="utf-8" />
         <title>FAQ</title>
     </head>
-
     <body>
         <main id="user-interface">
             <section id="faqs">
@@ -26,41 +25,29 @@
                 </details>
             </section>
         </main>
-
-        <script id="handlers">
-            const toggleFAQsHandler = (e) => {
-                debugger;
-
-                const target = e.target;
-                if (target.nodeChild !== 'SUMMARY') {
+        <script>
+            const toggleFAQsHandler = (event) => {
+                const target = event.target;
+                if (target.nodeName !== 'SUMMARY') {
                     return;
                 }
-
-                const sectionEl = e.;
-                const sectionChildren = _;
-
+                const sectionEl = event.currentTarget;
+                console.log('sectionEl : ' + sectionEl);
+                const sectionChildren = sectionEl.children;
                 for (const details of sectionChildren) {
-                    const summary = details.children[_];
-                    const wasNotClicked = summary !== _;
-
-                    const isOpen = details.open === _;
-
+                    const summary = details.children[0];
+                    const wasNotClicked = summary !== target;
+                    const isOpen = details.open === true;
                     if (wasNotClicked && isOpen) {
-                        details.open = _;
+                        details.open = false;
                     }
                 }
             };
         </script>
-
-        <script id="listeners">
+        <script>
             document
                 .getElementById('faqs')
                 .addEventListener('click', toggleFAQsHandler);
         </script>
-
-        <!--
-    https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details
-    https://stackoverflow.com/questions/16751345/automatically-close-all-the-other-details-tags-after-opening-a-specific-detai
-  -->
     </body>
 </html>

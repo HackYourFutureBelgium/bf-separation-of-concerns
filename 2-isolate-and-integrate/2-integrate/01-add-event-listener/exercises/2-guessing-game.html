@@ -30,20 +30,20 @@
             const setSecretHandler = () => {
                 debugger;
 
-                const newSecret = prompt('_');
+                const newSecret = prompt('enter a new secret');
                 if (newSecret === null) {
                     return;
                 }
 
                 secret = newSecret;
 
-                alert('_');
+                alert('your secret is safe with me ;)');
             };
 
             const guessSecretHandler = () => {
                 debugger;
 
-                const guess = prompt('_');
+                const guess = prompt('guess the secret');
                 if (guess === null) {
                     return;
                 }
@@ -51,21 +51,21 @@
                 const isCorrect = guess === secret;
 
                 if (isCorrect) {
-                    alert('_');
+                    alert('correct!');
                 } else {
-                    alert('_');
+                    alert('nope.');
                 }
             };
 
             const cheatHandler = () => {
                 debugger;
 
-                const isACheater = confirm('_');
+                const isACheater = confirm('are you sure you want to cheat?');
 
                 if (isACheater) {
-                    alert(`_`);
+                    alert(`the secret is:\n ${secret}`);
                 } else {
-                    alert('_');
+                    alert('good choice :)');
                 }
             };
         </script>
@@ -74,11 +74,17 @@
             // https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_event_listeners
             // https://stackoverflow.com/questions/7338193/using-chrome-how-to-find-to-which-events-are-bound-to-an-element
 
-            _._._(_, _);
+            document
+                .getElementById('set')
+                .addEventListener('click', setSecretHandler);
 
-            _._._(_, _);
+            document
+                .getElementById('guess')
+                .addEventListener('click', guessSecretHandler);
 
-            _._._(_, _);
+            document
+                .getElementById('cheat')
+                .addEventListener('click', cheatHandler);
         </script>
     </body>
 </html>

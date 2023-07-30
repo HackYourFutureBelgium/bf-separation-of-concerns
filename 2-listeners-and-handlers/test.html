@@ -38,37 +38,37 @@
         <script id="handlers">
             'use strict';
 
-            const first = (event) => {
+            const first = (e) => {
                 debugger;
-                console.assert(event.type === 'click', 'first, event.type');
+                console.assert(e.type === 'click', 'first, e.type');
                 console.assert(
-                    event.target.id === 'user-action',
-                    'first, event.target.id',
+                    e.target.id === 'user-action',
+                    'first, e.target.id',
                 );
                 console.assert(
-                    event.target.value === 'a button',
-                    'first, event.target.value',
+                    e.target.value === 'a button',
+                    'first, e.target.value',
                 );
                 console.assert(
-                    event.target.nodeName === 'INPUT',
-                    'first, event.target.nodeName',
+                    e.target.nodeName === 'INPUT',
+                    'first, e.target.nodeName',
                 );
                 console.assert(
-                    event.target.form.id === 'inputs',
-                    'first, event.target.form.id',
+                    e.target.form.id === 'inputs',
+                    'first, e.target.form.id',
                 );
             };
 
-            const second = (event) => {
+            const second = (e) => {
                 debugger;
-                console.assert(event.type === 'change', 'second, event.type');
+                console.assert(e.type === 'change', 'second, e.type');
                 console.assert(
-                    event.target.id === 'selector',
-                    'second, event.target.id',
+                    e.target.id === 'selector',
+                    'second, e.target.id',
                 );
                 console.assert(
-                    event.target.nodeName === 'SELECT',
-                    'second, event.target.id',
+                    e.target.nodeName === 'SELECT',
+                    'second, e.target.id',
                 );
             };
         </script>
