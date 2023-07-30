@@ -15,12 +15,17 @@
     <body>
         <section id="user-interface">
             <form class="inputs" id="inputs">
-                <select name="_" id="selector">
+                <select name="type" id="selector">
                     <option value="rock">rock</option>
                     <option value="paper">paper</option>
                     <option value="scissors">scissors</option>
                 </select>
-                <input type="button" id="_" name="clickable" value="a button" />
+                <input
+                    type="button"
+                    id="user-action"
+                    name="clickable"
+                    value="a button"
+                />
             </form>
         </section>
 
@@ -30,7 +35,7 @@
             const first = (event) => {
                 debugger;
                 console.assert(
-                    event.target._ === 'selector',
+                    event.target.id === 'selector',
                     'first: target.id',
                 );
                 console.assert(
@@ -42,20 +47,20 @@
                     'first: target.form.id',
                 );
                 console.assert(
-                    event.target.childElementCount === _,
+                    event.target.childElementCount === 3,
                     'third: target.childElementCount',
                 );
             };
 
             const second = (event) => {
                 debugger;
-                console.assert(event._ === 'blur', 'second: event.type');
+                console.assert(event.type === 'blur', 'second: event.type');
                 console.assert(
                     event.target.id === 'selector',
                     'second: target.id',
                 );
                 console.assert(
-                    event.target.nodeName === '_',
+                    event.target.nodeName === 'SELECT',
                     'second: target.nodeName',
                 );
                 console.assert(
@@ -80,16 +85,28 @@
                     'third: target.name',
                 );
                 console.assert(
-                    event.target.nodeName === '_',
+                    event.target.nodeName === 'INPUT',
                     'third: target.nodeName',
                 );
             };
         </script>
 
         <script id="listeners">
-            document.getElementById('_').addEventListener('change', _);
-            document.getElementById('_').addEventListener('blur', _);
-            document.getElementById('_').addEventListener('click', _);
+            document
+                .getElementById('selector')
+                .addEventListener('change', (e) => {
+                    first(e);
+                });
+            document
+                .getElementById('selector')
+                .addEventListener('blur', (e) => {
+                    second(e);
+                });
+            document
+                .getElementById('user-action')
+                .addEventListener('click', (e) => {
+                    third(e);
+                });
         </script>
     </body>
 </html>

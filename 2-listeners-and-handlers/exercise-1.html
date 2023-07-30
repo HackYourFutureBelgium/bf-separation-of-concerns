@@ -22,24 +22,26 @@
             const handler = (event) => {
                 debugger;
                 console.assert(
-                    event.target.innerHTML === '_',
+                    event.target.innerHTML === 'catch me if you can!',
                     'event.target.innerHTML',
                 );
                 console.assert(
-                    event.target.nodeName === '_',
+                    event.target.nodeName === 'BUTTON',
                     'event.target.nodeName',
                 );
                 console.assert(event.target.id === 'hi', 'event.target.id');
                 console.assert(
                     event.target.className === 'secret',
-                    'event.target._',
+                    'event.target.className',
                 );
                 console.assert(event.type === 'click', 'event.type');
             };
         </script>
 
         <script id="listeners">
-            document.getElementById('_').addEventListener('_', _);
+            document.getElementById('hi').addEventListener('click', (e) => {
+                handler(e);
+            });
         </script>
     </body>
 </html>
