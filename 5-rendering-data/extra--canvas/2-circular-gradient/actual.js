@@ -1,15 +1,15 @@
 'use strict';
 
 const actual = (innerColor, outerColor, r1) => {
-    const canvasEl = document.createElement('_');
-    const ctx = canvasEl.getContext('_');
+  const canvasEl = document.createElement('canvas');
+  const ctx = canvasEl.getContext('2d');
 
-    var grd = ctx.createRadialGradient(50, 50, 0, 50, 50, _);
-    grd.addColorStop(0, _);
-    grd.addColorStop(1, _);
+  const grd = ctx.createRadialGradient(50, 50, 0, 50, 50, r1);
+  grd.addColorStop(0, innerColor);
+  grd.addColorStop(1, outerColor);
 
-    _.fillStyle = _;
-    _.fillRect(0, 0, 100, 100);
+  ctx.fillStyle = grd;
+  ctx.fillRect(0, 0, 100, 100);
 
-    return _;
+  return canvasEl;
 };
