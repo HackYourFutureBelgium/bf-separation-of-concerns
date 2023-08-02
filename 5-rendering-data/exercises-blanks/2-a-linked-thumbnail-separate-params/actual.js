@@ -4,17 +4,17 @@ const actual = (color, url) => {
     const divEl = document.createElement('div');
     divEl.className = 'thumbnail-container';
 
-    const aEl = document.createElement('_');
-    aEl.className = '_';
-    aEl.target = '_';
-    aEl.href = _;
+    const aEl = document.createElement('a');
+    aEl.className = 'to-the-right';
+    aEl.target = '_blank';
+    aEl.href = url;
     divEl.appendChild(aEl);
 
-    const imgEl = document.createElement('_');
-    imgEl.className = '_';
-    imgEl.src = _;
-    imgEl.alt = `the color ${_}`;
-    aEl.appendChild(_);
+    const imgEl = document.createElement('img');
+    imgEl.className = 'thumbnail';
+    imgEl.src = url;
+    imgEl.alt = `the color ${color}`;
+    aEl.appendChild(imgEl);
 
     return divEl;
 };

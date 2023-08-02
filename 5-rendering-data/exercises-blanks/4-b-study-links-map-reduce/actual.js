@@ -1,30 +1,32 @@
 'use strict';
 
 const actual = (linksData) => {
-    const divEl = document.createElement('_');
+  const divEl = document.createElement('div');
 
-    const h3El = document.createElement('_');
-    h3El.textContent = linksData.topic;
-    divEl.appendChild(h3El);
+  const h3El = document.createElement('h3');
+  h3El.textContent = linksData.topic;
+  divEl.appendChild(h3El);
 
-    const entryToLi = (entry) => {
-        const liEl = document.createElement('_');
-        const aEl = document.createElement('_');
-        aEl.innerHTML = entry[_];
-        aEl.href = entry[_];
-        aEl.target = '_';
-        _.appendChild(_);
-        return liEl;
-    };
+  const entryToLi = (entry) => {
+    const liEl = document.createElement('li');
+    const aEl = document.createElement('a');
+    aEl.innerHTML = entry[Object.keys(entry)[0]];
+    aEl.href = entry[Object.keys(entry)[0]];
+    aEl.target = '_blank';
+    liEl.appendChild(aEl);
+    return liEl;
+  };
 
-    const appendLiToList = (listEl, nextLi) => {
-        _.appendChild(_);
-        return listEl;
-    };
+  const appendLiToList = (listEl, nextLi) => {
+    listEl.appendChild(nextLi);
+    return listEl;
+  };
 
-    const ulEl = Object._(linksData._)._(_)._(_, document.createElement('_'));
+  const ulEl = Object.values(linksData.links)
+    .map(entryToLi)
+    .reduce(appendLiToList, document.createElement('ul'));
 
-    divEl.appendChild(_);
+  divEl.appendChild(ulEl);
 
-    return divEl;
+  return divEl;
 };
