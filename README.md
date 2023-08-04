@@ -92,5 +92,7 @@ There is no linting script in this repository. It's for practice only, no need t
 ### Week2
 
 - [day7](https://youtu.be/YOwPioc7mVo)
+- [day9](https://youtu.be/syvQtBaV36g)
+- [day10](https://youtu.be/RlrLe630-XE)
 
 </details>
