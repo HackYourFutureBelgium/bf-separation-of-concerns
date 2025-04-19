@@ -5,4 +5,4 @@
 - And a group project.
 
 - Create random groups and get set up for the week's project!
-  - [separation-of-concerns-starter](https://github.com/HackYourFutureBelgium/separation-of-concerns-starter)
+  - [separation-of-concerns-starter](https://github.com/sammou00/js-project)
