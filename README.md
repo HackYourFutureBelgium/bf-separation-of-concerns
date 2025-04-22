@@ -75,24 +75,3 @@ There is no linting script in this repository. It's for practice only, no need t
 ---
 
 ![draino in the fridge](./assets/draino-in-the-fridge.png)
-
-## Class recording
-
-<details>
-<summary>expand/collapse</summary>
-<br>
-
-### Week1
-
-- [day1](https://youtu.be/IDCeq2z-_6Y)
-- [day3](https://youtu.be/wP3mCjZzHa8)
-- [day4](https://youtu.be/1RizIxUqeLE)
-- [day5](https://youtu.be/RieEjZMUTc4)
-
-### Week2
-
-- [day7](https://youtu.be/YOwPioc7mVo)
-- [day9](https://youtu.be/syvQtBaV36g)
-- [day10](https://youtu.be/RlrLe630-XE)
-
-</details>
