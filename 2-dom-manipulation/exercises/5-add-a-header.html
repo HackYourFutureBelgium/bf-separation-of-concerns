@@ -44,6 +44,16 @@
                     'use strict';
                     debugger;
 
+                    const actualDiv = document.getElementById('actual');
+
+                    const header = document.createElement('h1');
+                    header.innerText = 'a list of things';
+                    actualDiv.prepend(header);
+
+                    const ulEl = actualDiv.querySelector('ul');
+                    const secondItem = ulEl.children[1];
+                    secondItem.innerText = 'solar systems';
+
                     // write me! (... without using cloneNode, that's kind of cheating)
                 </script>
             </div>
