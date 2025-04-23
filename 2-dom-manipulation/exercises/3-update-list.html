@@ -46,6 +46,10 @@
                     debugger;
 
                     // write me! (... without using cloneNode, that's kind of cheating)
+                    const actualDiv = document.getElementById('actual');
+                    const list = actualDiv.children[1];
+                    const firstItem = list.children[0];
+                    firstItem.innerText = 'robots';
                 </script>
             </div>
 

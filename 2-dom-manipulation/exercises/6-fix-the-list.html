@@ -46,6 +46,23 @@
                     debugger;
 
                     // write me! (... without using cloneNode, that's kind of cheating)
+                    const actualDiv = document.getElementById('actual');
+                    const expectDiv = document.getElementById('expected');
+
+                    const header = document.createElement('h1');
+                    header.innerText = 'a list of things';
+                    actualDiv.prepend(header);
+
+                    const olEl = actualDiv.querySelector('ol');
+                    const ulEl = document.createElement('ul');
+                    actualDiv.replaceChild(ulEl, olEl);
+
+                    const liElements = expectDiv.querySelectorAll('li');
+                    liElements.forEach((li) => {
+                        const newLi = document.createElement('li');
+                        newLi.innerText = li.innerText;
+                        ulEl.appendChild(newLi);
+                    });
                 </script>
             </div>
 
