@@ -41,11 +41,11 @@
             // 1. A user can see all numbers listed in an alert
             const displayNumbersHandler = (
                 arrayOfNumbers = numbers,
-                message = _,
+                message = 'all numbers',
             ) => {
                 debugger;
-                const joinNumbers = (acc, next) => _;
-                const allNumbersListed = arrayOfNumbers._(joinNumbers, _);
+                const joinNumbers = (acc, next) => `${acc}\n${next}`;
+                const allNumbersListed = arrayOfNumbers.reduce(joinNumbers, '');
                 alert(`${message}: ${allNumbersListed}`);
             };
 
@@ -53,21 +53,23 @@
             //  (beginning with zero, ending with userNumber - 1)
             const resetNumbersHandler = () => {
                 debugger;
-                const userInput = prompt(_);
-                if (_) {
+                const userInput = prompt(
+                    'Enter some numbers to reset the array',
+                );
+                if (userInput === null) {
                     return;
                 }
 
                 const userNumber = Number(userInput);
-                if (_) {
-                    alert(_);
+                if (Number.isNaN(userNumber)) {
+                    alert('Input must be a number');
                     return;
                 }
 
                 // a basic for loop, not for ... of
                 numbers = [];
-                for (_; _; _) {
-                    numbers._(_);
+                for (let i = 0; i < userNumber; i++) {
+                    numbers.push(userNumber);
                 }
 
                 displayNumbersHandler(); // no arguments! this is correct like it is
@@ -76,64 +78,70 @@
             // 3. A user can see a list of all numbers greater than their input
             const greaterThanHandler = () => {
                 debugger;
-                const userInput = prompt(_);
-                if (_) {
+                const userInput = prompt('Enter a number');
+                if (userInput === null) {
                     return;
                 }
 
-                const userNumber = _;
-                if (_) {
-                    alert(_);
+                const userNumber = Number(userInput);
+                if (Number.isNaN(userNumber)) {
+                    alert('Please enter a number!');
                     return;
                 }
 
-                const numbersGreaterThan = numbers._(_);
+                const numbersGreaterThan = numbers.filter(
+                    (num) => num > userNumber,
+                );
                 const howMany = numbersGreaterThan.length;
-                const newMessage = _;
+                const newMessage = `There are ${howMany} number greater than ${userNumber}`;
 
-                _(numbersGreaterThan, newMessage);
+                alert(numbersGreaterThan, newMessage);
             };
 
             // 4. A user can see a list of all numbers less than their input
             const lessThanHandler = () => {
                 debugger;
-                const userInput = _;
-                if (_) {
+                const userInput = prompt('Enter a number');
+                if (userInput === null) {
                     return;
                 }
 
-                const userNumber = _;
-                if (_) {
-                    _;
+                const userNumber = Number(userInput);
+                if (Number.isNaN(userNumber)) {
+                    alert('please enter a number!');
                     return;
                 }
 
-                const numbersLessThan = numbers._(_);
+                const numbersLessThan = numbers.filter(
+                    (num) => num < userNumber,
+                );
                 const howMany = numbersLessThan.length;
-                const newMessage = _;
+                const newMessage = `There are ${howMany} number less than ${userNumber}`;
 
-                _(numbersLessThan, newMessage);
+                alert(numbersLessThan, newMessage);
             };
 
             // 5. A user can see a list of all numbers divisible by their input
             const divisibleByHandler = () => {
                 debugger;
-                const userInput = _;
-                if (_) {
+                const userInput = prompt('Enter a number to divide by:');
+                if (userInput === null) {
                     return;
                 }
 
-                const userNumber = _;
-                if (_) {
-                    alert(_);
+                const userNumber = Number(userInput);
+                if (Number.isNaN(userNumber) || userNumber === 0) {
+                    alert('Input must be a non-zero number!');
                     return;
                 }
 
-                const numbersDivisible = _;
+                const numbersDivisible = numbers.filter(
+                    (num) => num % userNumber === 0,
+                );
                 const howMany = numbersDivisible.length;
-                const newMessage = _;
+                const newMessage = `There are ${howMany} numbers divisible by ${userNumber}`;
 
-                _(numbersDivisible, newMessage);
+                alert(numbersDivisible, newMessage);
             };
         </script>
 
