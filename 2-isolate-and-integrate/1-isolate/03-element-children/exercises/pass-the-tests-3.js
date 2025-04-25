@@ -19,6 +19,11 @@ console.log(divEl.nodeName, divEl.cloneNode(true));
 
 // --- write some code ---
 //  you will need to access and update each <td> element
+const changeto = ['a', 'b', 'c', 'd'];
+const tds = divEl.querySelectorAll('td');
+tds.forEach((td, index) => {
+    td.innerHTML = changeto[index];
+});
 
 // --- --- --- --- --- ---
 

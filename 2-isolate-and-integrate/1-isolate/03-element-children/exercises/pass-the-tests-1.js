@@ -10,6 +10,10 @@ console.log(ulEl.nodeName, ulEl.cloneNode(true));
 
 // --- write some code ---
 
+ulEl.innerHTML = '<li>toad</li>';
+ulEl.innerHTML += '<li>frog</li>';
+ulEl.innerHTML += '<li>salamander</li>';
+
 // --- --- --- --- --- ---
 
 console.log(ulEl.nodeName, ulEl.cloneNode(true));
