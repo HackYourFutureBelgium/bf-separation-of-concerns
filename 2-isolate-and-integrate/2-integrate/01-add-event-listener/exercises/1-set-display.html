@@ -1,61 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>set, display</title>
+  <head>
+    <meta charset="utf-8" />
+    <title>set, display</title>
 
-        <style>
-            .centered {
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                text-align: center;
-            }
-        </style>
-    </head>
+    <style>
+      .centered {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+    </style>
+  </head>
 
-    <body>
-        <main id="user-interface" class="centered">
-            <button id="set-button">set string</button> <br />
-            <button id="display-button">display string</button>
-        </main>
+  <body>
+    <main id="user-interface" class="centered">
+      <button id="set-button">set string</button> <br />
+      <button id="display-button">display string</button>
+    </main>
 
-        <script id="shared-data">
-            let userString = '';
-        </script>
+    <script id="shared-data">
+      let userString = "";
+    </script>
 
-        <script id="handlers">
-            const setStringHandler = () => {
-                debugger;
+    <script id="handlers">
+      const setStringHandler = () => {
+        debugger;
 
-                // read user input
-                const userInput = prompt('_');
-                if (userInput === null) {
-                    return;
-                }
+        // read user input
+        const userInput = prompt("Please enter a string:");
+        if (userInput === null) {
+          return;
+        }
 
-                // update global variable
-                userString = userInput;
+        // update global variable
+        userString = userInput;
 
-                // let the user know the userString is saved
-                alert('_');
-            };
+        // let the user know the userString is saved
+        alert(`Your string "${userString}" has been saved.`);
+      };
 
-            const displayStringHandler = () => {
-                debugger;
+      const displayStringHandler = () => {
+        debugger;
 
-                alert(userString);
-            };
-        </script>
+        if (userString === "") {
+          alert("No string has been set yet.");
+        } else {
+          alert(`The saved string is: "${userString}"`);
+        }
+      };
+    </script>
 
-        <script id="listeners">
-            // https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_event_listeners
-            // https://stackoverflow.com/questions/7338193/using-chrome-how-to-find-to-which-events-are-bound-to-an-element
+    <script id="listeners">
+      const setButton = document.getElementById("set-button");
+      setButton.addEventListener("click", setStringHandler);
 
-            _._._(_, _);
-
-            _._._(_, _);
-        </script>
-    </body>
+      const displayButton = document.getElementById("display-button");
+      displayButton.addEventListener("click", displayStringHandler);
+    </script>
+  </body>
 </html>

@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <head>
         <title>Exercise 1</title>
-        <meta charset="utf-8" />
+        
 
         <style>
             .secret {
@@ -15,8 +17,7 @@
         <section id="user-interface">
             <button id="hi" class="secret">catch me if you can!</button>
         </section>
-
-        <script id="handlers">
+      <script id="handlers">
             'use strict';
 
             const handler = (event) => {
@@ -37,9 +38,13 @@
                 console.assert(event.type === 'click', 'event.type');
             };
         </script>
+        
 
         <script id="listeners">
-            document.getElementById('_').addEventListener('_', _);
+          
+        document.getElementById('handlers').addEventListener('click', handler);
         </script>
     </body>
 </html>
+
+

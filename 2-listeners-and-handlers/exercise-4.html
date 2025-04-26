@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <head>
-        <title>Listeners & Handlers 4</title>
-        <meta charset="utf-8" />
+        <title>Listeners-&-Handlers 4</title>
+       
 
         <style>
             .output {
@@ -24,8 +26,9 @@
     <body>
         <section id="user-interface">
             <form class="inputs" id="inputs">
-                <input name="value" type="text" />
-                <select name="type" id="_">
+                <label for="input">Name</label>
+                <input name="value" type="text"  placeholder="name"/>
+                <select name="type" id="selector" title="select a type" >
                     <option value="string">string</option>
                     <option value="number">number</option>
                     <option value="boolean">boolean</option>
