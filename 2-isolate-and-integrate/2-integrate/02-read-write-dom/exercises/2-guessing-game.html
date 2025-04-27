@@ -1,70 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>guessing game</title>
+  <head>
+    <meta charset="utf-8" />
+    <title>guessing game</title>
 
-        <style>
-            .centered {
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                text-align: center;
-            }
+    <style>
+      .centered {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
 
-            .hidden {
-                color: white;
-            }
+      .hidden {
+        color: white;
+      }
 
-            .visible {
-                color: black;
-            }
-        </style>
-    </head>
+      .visible {
+        color: black;
+      }
+    </style>
+  </head>
 
-    <body>
-        <main id="user-interface" class="centered">
-            <input id="user-input" type="password" />
-            <hr />
-            <code id="output" class="hidden"></code>
-        </main>
+  <body>
+    <main id="user-interface" class="centered">
+      <input id="user-input" type="password" />
+      <hr />
+      <code id="output" class="hidden"></code>
+    </main>
 
-        <script id="handlers">
-            const setSecretHandler = () => {
-                debugger;
+    <script id="handlers">
+      const setSecretHandler = () => {
+        debugger;
 
-                const inputEl = document.getElementById('_');
-                const newSecret = inputEl.value;
+        const inputEl = document.getElementById("user-input"); // Correctly retrieve the input element
+        const newSecret = inputEl.value;
 
-                const outputEl = document.getElementById('_');
-                outputEl._ = newSecret;
-            };
+        const outputEl = document.getElementById("output"); // Retrieve the output element
+        outputEl.innerHTML = newSecret; // Set the output's innerHTML to the secret
+      };
 
-            const displaySecretHandler = () => {
-                debugger;
+      const displaySecretHandler = () => {
+        debugger;
 
-                const outputEl = document.getElementById('_');
-                outputEl._ = 'visible';
-            };
+        const outputEl = document.getElementById("output"); // Retrieve the output element
+        outputEl.className = "visible"; // Change the class to make the secret visible
+      };
 
-            const hideSecretHandler = () => {
-                debugger;
+      const hideSecretHandler = () => {
+        const outputEl = document.getElementById("output"); // Retrieve the output element
+        outputEl.className = "hidden"; // Change the class to hide the secret
+      };
+    </script>
 
-                const outputEl = document.getElementById('_');
-                outputEl.className = '_';
-            };
-        </script>
+    <script id="listeners">
+      // this is all correct!
+      document
+        .getElementById("user-input")
+        .addEventListener("keyup", setSecretHandler);
 
-        <script id="listeners">
-            // this is all correct!
-            document
-                .getElementById('user-input')
-                .addEventListener('keyup', setSecretHandler);
-
-            const outputEl = document.getElementById('output');
-            outputEl.addEventListener('mouseenter', displaySecretHandler);
-            outputEl.addEventListener('mouseleave', hideSecretHandler);
-        </script>
-    </body>
+      const outputEl = document.getElementById("output");
+      outputEl.addEventListener("mouseenter", displaySecretHandler);
+      outputEl.addEventListener("mouseleave", hideSecretHandler);
+    </script>
+  </body>
 </html>

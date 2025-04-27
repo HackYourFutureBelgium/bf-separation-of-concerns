@@ -1,51 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>Todo</title>
-    </head>
+  <head>
+    <meta charset="utf-8" />
+    <title>Todo</title>
+  </head>
 
-    <body>
-        <main id="user-interface">
-            <ul id="list">
-                <li><button>X</button><input value="start coding" /></li>
-                <li><button>X</button><input value="stop coding" /></li>
-                <li><button id="add-todo-button">+</button></li>
-            </ul>
-        </main>
+  <body>
+    <main id="user-interface">
+      <ul id="list">
+        <li><button>X</button><input value="start coding" /></li>
+        <li><button>X</button><input value="stop coding" /></li>
+        <li><button id="add-todo-button">+</button></li>
+      </ul>
+    </main>
 
-        <script id="handlers">
-            const deleteTodoHandler = (event) => {
-                debugger;
-                const target = _;
-                if (target._ === 'BUTTON' && target._ === 'X') {
-                    const liToRemove = _.parentElement;
-                    const todoList = document.getElementById(_);
-                    todoList._(liToRemove);
-                }
-            };
+    <script id="handlers">
+      const deleteTodoHandler = (event) => {
+ 
+        const target = event.target; // Get the clicked element
+        if (target.nodeName === "BUTTON" && target.innerHTML === "X") {
+          const liToRemove = target.parentElement; // The <li> to remove
+          const todoList = document.getElementById("list"); // The <ul> element
+          todoList.removeChild(liToRemove); // Remove the <li> from the <ul>
+        }
+      };
 
-            const addTodoHandler = (event) => {
-                debugger;
+      const addTodoHandler = (event) => {
+   
 
-                const newLi = document.createElement(_);
-                const newButton = document.createElement(_);
-                newButton.innerHTML = '_';
-                newLi.appendChild(newButton);
-                const newInput = document.createElement(_);
-                newLi.appendChild(newInput);
+        const newLi = document.createElement("li"); // Create a new <li>
+        const newButton = document.createElement("button"); // Create a new button
+        newButton.innerHTML = "X"; // Set button text to "X"
+        newLi.appendChild(newButton); // Add the button to the <li>
+        const newInput = document.createElement("input"); // Create a new input
+        newLi.appendChild(newInput); // Add the input to the <li>
 
-                const addButton = event._;
-                const addButtonParent = addButton._;
-                const todoList = addButtonParent._;
-                todoList.insertBefore(_, _);
-            };
-        </script>
+        const addButton = event.target; // The "+" button
+        const addButtonParent = addButton.parentElement; // The parent <li> of the "+" button
+        const todoList = addButtonParent.parentElement; // The <ul> element
+        todoList.insertBefore(newLi, addButtonParent); // Insert the new <li> before the <li> containing "+"
+      };
+    </script>
 
-        <script id=" listeners">
-            document.getElementById(_).addEventListener('click', _);
+    <script id="listeners">
+      const todoList = document.getElementById("list");
+      todoList.addEventListener("click", deleteTodoHandler); // Attach delete handler to the list
 
-            document.getElementById(_).addEventListener('click', _);
-        </script>
-    </body>
+      const addTodoButton = document.getElementById("add-todo-button");
+      addTodoButton.addEventListener("click", addTodoHandler); // Attach add handler to the "+" button
+    </script>
+  </body>
 </html>

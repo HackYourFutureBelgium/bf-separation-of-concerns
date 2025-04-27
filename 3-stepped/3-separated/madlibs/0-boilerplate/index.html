@@ -1,15 +1,34 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Mad Libs</title>
-        <meta charset="utf-8" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mad Libs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section id="user-interface">
+        <h1>Mad Libs</h1>
+        <form id="mad-libs-form">
+            <label for="noun">Noun:</label>
+            <input type="text" id="noun" placeholder="e.g., dog" required>
+            
+            <label for="verb">Verb:</label>
+            <input type="text" id="verb" placeholder="e.g., run" required>
+            
+            <label for="adjective">Adjective:</label>
+            <input type="text" id="adjective" placeholder="e.g., silly" required>
+            
+            <label for="place">Place:</label>
+            <input type="text" id="place" placeholder="e.g., park" required>
+            
+            <button type="submit">Generate Story</button>
+        </form>
+        <p id="story-output" class="story"></p>
+    </section>
 
-        <link rel="stylesheet" href="./styles.css" />
-    </head>
-
-    <body>
-        <section id="user-interface"></section>
-
-        <script type="module" src="./src/init.js"></script>
-    </body>
+    <!-- Load the entry point script as a module -->
+    <script type="module" src="./src/init.js"></script>
+   
+</body>
 </html>

@@ -5,7 +5,10 @@ buttonEl.innerHTML = '12345';
 console.log('initial button:', buttonEl.cloneNode(true));
 
 const reverseInnerHTMLHandler = (event) => {
-    // write code to reverse the target element's innerHTML
+  // Reverse the target element's innerHTML
+  const currentHTML = event.target.innerHTML;
+  const reversedHTML = currentHTML.split('').reverse().join('');
+  event.target.innerHTML = reversedHTML;
 };
 
 buttonEl.addEventListener('click', reverseInnerHTMLHandler);
