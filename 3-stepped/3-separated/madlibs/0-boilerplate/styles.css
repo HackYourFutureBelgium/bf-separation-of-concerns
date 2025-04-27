@@ -44,6 +44,7 @@ input {
     border-radius: 4px;
     font-size: 16px;
     background-color: #333;
+    color: #fff;
 }
 
 button {
@@ -69,4 +70,5 @@ button:hover {
     background-color: #f9f9f9;
     color: #333;
     font-style: italic;
+    height: 10vh;
 }

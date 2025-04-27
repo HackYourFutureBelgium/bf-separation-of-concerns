@@ -2,7 +2,7 @@ import { reverse } from '../utils/reverse.js';
 
 export const reverseInput = (event) => {
     // entry point for the user interaction
-    debugger;
+   
 
     // read user input from event
     const input = event.target.value;
@@ -18,3 +18,4 @@ export const reverseInput = (event) => {
     console.log('input:', typeof input + ',', input);
     console.log('output', typeof reversed + ',', reversed);
 };
+
